@@ -1,0 +1,213 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: _mask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: gora
+    m_Weight: 1
+  - m_Path: miecz_moj
+    m_Weight: 1
+  - m_Path: miecza_pochwa
+    m_Weight: 1
+  - m_Path: pas1
+    m_Weight: 1
+  - m_Path: peleryna_dol
+    m_Weight: 1
+  - m_Path: peleryna_gora
+    m_Weight: 1
+  - m_Path: Root
+    m_Weight: 1
+  - m_Path: Root/Hip_Center
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz1/miecz2
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz1/miecz2/miecz3
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz1/miecz2/miecz3/miecz4
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz_nowy_1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz_nowy_1/kolko_1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz_nowy_1/kolko_1/pasek_1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz_nowy_1/kolko_2
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz_nowy_1/kolko_2/pasek_2
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz_nowy_1/miecz_nowy_2
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz_nowy_1/miecz_nowy_2/kolko_3
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz_nowy_1/miecz_nowy_2/kolko_3/pasek_3
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz_nowy_1/miecz_nowy_2/miecz_nowy_3
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/miecz_nowy_1/miecz_nowy_2/miecz_nowy_3/miecz_nowy_4
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Left
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Left/Shoulder_Left
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Left/Shoulder_Left/Elbow_Left
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Left/Shoulder_Left/Elbow_Left/ArmorLeft1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Left/Shoulder_Left/Elbow_Left/ArmorLeft1/ArmorLeft2
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Left/Shoulder_Left/Elbow_Left/Wrist_Left
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Left/Shoulder_Left/Elbow_Left/Wrist_Left/Fingers_Left
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Left/Shoulder_Left/Elbow_Left/Wrist_Left/Fingers_Left/FingerTips_Left
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Left/Shoulder_Left/Elbow_Left/Wrist_Left/Thumb_Left
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Left/Shoulder_Left/Elbow_Left/Wrist_Left/Thumb_Left/ThumbTip_Left
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Left/ShoulderArmorLeft1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Left/ShoulderArmorLeft1/ShoulderArmorLeft2
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Right
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Right/Shoulder_Right
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Right/Shoulder_Right/Elbow_Right
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Right/Shoulder_Right/Elbow_Right/ArmorLeft1
+      1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Right/Shoulder_Right/Elbow_Right/ArmorLeft1
+      1/ArmorLeft2 1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Right/Shoulder_Right/Elbow_Right/Wrist_Right
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Right/Shoulder_Right/Elbow_Right/Wrist_Right/Fingers_Right
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Right/Shoulder_Right/Elbow_Right/Wrist_Right/Fingers_Right/FingerTips_Right
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Right/Shoulder_Right/Elbow_Right/Wrist_Right/Thumb_Right
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Right/Shoulder_Right/Elbow_Right/Wrist_Right/Thumb_Right/ThumbTip_Right
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Right/ShoulderArmorLeft1
+      1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Clavicle_Right/ShoulderArmorLeft1
+      1/ShoulderArmorLeft2 1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Neck
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/Neck/Head
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_A1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_A1/p_A2
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_A1/p_A2/p_A3
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_A1/p_A2/p_A3/p_A4
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_A1/p_A2/p_A3/p_A4/p_A5
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_A1/p_A2/p_A3/p_A4/p_A5/p_A6
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_A1/p_A2/p_A3/p_A4/p_A5/p_A6/p_A7
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_B1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_B1/p_B2
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_B1/p_B2/p_B3
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_B1/p_B2/p_B3/p_B4
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_B1/p_B2/p_B3/p_B4/p_B5
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_B1/p_B2/p_B3/p_B4/p_B5/p_B6
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_B1/p_B2/p_B3/p_B4/p_B5/p_B6/p_B7
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_C1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_C1/p_C2
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_C1/p_C2/p_C3
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_C1/p_C2/p_C3/p_C4
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_C1/p_C2/p_C3/p_C4/p_C5
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_C1/p_C2/p_C3/p_C4/p_C5/p_C6
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_C1/p_C2/p_C3/p_C4/p_C5/p_C6/p_C7
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_D1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_D1/p_D2
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_D1/p_D2/p_D3
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_D1/p_D2/p_D3/p_D4
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_D1/p_D2/p_D3/p_D4/p_D5
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_D1/p_D2/p_D3/p_D4/p_D5/p_D6
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_D1/p_D2/p_D3/p_D4/p_D5/p_D6/p_D7
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_E1
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_E1/p_E2
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_E1/p_E2/p_E3
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_E1/p_E2/p_E3/p_E4
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_E1/p_E2/p_E3/p_E4/p_E5
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_E1/p_E2/p_E3/p_E4/p_E5/p_E6
+    m_Weight: 1
+  - m_Path: Root/Hip_Center/Spine/SpineShoulders/peleryna/p_E1/p_E2/p_E3/p_E4/p_E5/p_E6/p_E7
+    m_Weight: 1
+  - m_Path: Root/Pelvis_LeftSide
+    m_Weight: 1
+  - m_Path: Root/Pelvis_LeftSide/Hip_Left
+    m_Weight: 1
+  - m_Path: Root/Pelvis_LeftSide/Hip_Left/Knee_Left
+    m_Weight: 1
+  - m_Path: Root/Pelvis_LeftSide/Hip_Left/Knee_Left/Ankle_Left
+    m_Weight: 1
+  - m_Path: Root/Pelvis_LeftSide/Hip_Left/Knee_Left/Ankle_Left/Toe_Left
+    m_Weight: 1
+  - m_Path: Root/Pelvis_RightSide
+    m_Weight: 1
+  - m_Path: Root/Pelvis_RightSide/Hip_Right
+    m_Weight: 1
+  - m_Path: Root/Pelvis_RightSide/Hip_Right/Knee_Right
+    m_Weight: 1
+  - m_Path: Root/Pelvis_RightSide/Hip_Right/Knee_Right/Ankle_Right
+    m_Weight: 1
+  - m_Path: Root/Pelvis_RightSide/Hip_Right/Knee_Right/Ankle_Right/Toe_Right
+    m_Weight: 1
+  - m_Path: rycerz_buty
+    m_Weight: 1
+  - m_Path: ubrania_portki
+    m_Weight: 1
