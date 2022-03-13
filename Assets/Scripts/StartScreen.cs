@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using Windows.Kinect;
 using AnimeRx;
 using UniRx;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class StartScreen : MonoBehaviour
 {
@@ -37,6 +34,8 @@ public class StartScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DebugText.Log(string.Empty);
+
         var sensor = KinectSensor.GetDefault();
 
         if (sensor == null)
@@ -80,6 +79,13 @@ public class StartScreen : MonoBehaviour
         var colorCameraHandPos = sensor.CoordinateMapper.MapCameraPointToColorSpace(hand.Position);
         var colorCameraHeadPos = sensor.CoordinateMapper.MapCameraPointToColorSpace(head.Position);
 
+        DebugText.Log($"Color camera hand pos {colorCameraHandPos.Y} head pos {colorCameraHeadPos.Y}");
+        
+        if (colorCameraHandPos.Y < colorCameraHeadPos.Y)
+        {
+            DebugText.Log($"canvasGroup.alpha {canvasGroup.alpha}");
+        }
+        
         if (colorCameraHandPos.Y < colorCameraHeadPos.Y && canvasGroup.alpha >= 1)
         {
             FadeOut();
@@ -90,6 +96,7 @@ public class StartScreen : MonoBehaviour
     public void FadeOut()
     {
         _animationdDisposable?.Dispose();
+        canvasGroup.alpha = 0.99f;
         _animationdDisposable = Anime.Play(canvasGroup.alpha, 0, Easing.Linear(animationTime))
             .Subscribe(a => canvasGroup.alpha = a);
     }
@@ -97,6 +104,7 @@ public class StartScreen : MonoBehaviour
     public  void FadeIn()
     {
         _animationdDisposable?.Dispose();
+        canvasGroup.alpha = 0.01f;
         _animationdDisposable = Anime.Play(canvasGroup.alpha, 1, Easing.Linear(animationTime))
             .Subscribe(a => canvasGroup.alpha = a);
     }

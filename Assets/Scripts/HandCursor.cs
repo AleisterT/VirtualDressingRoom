@@ -33,7 +33,6 @@ public class HandCursor : MonoBehaviour
     private void OnDestroy()
     {
         userDetectionController.UserLeft -= UserLeftHandler;
-        userDetectionController.UserJoined -= UserJoinedHandler;
 
         _bodyFrameReader?.Dispose();
     }
@@ -108,11 +107,6 @@ public class HandCursor : MonoBehaviour
     private void Awake()
     {
         userDetectionController.UserLeft += UserLeftHandler;
-        userDetectionController.UserJoined += UserJoinedHandler;
-    }
-
-    private void UserJoinedHandler()
-    {
     }
 
     private void UserLeftHandler()

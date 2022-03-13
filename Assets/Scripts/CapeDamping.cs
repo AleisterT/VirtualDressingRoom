@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class CapeDamping : MonoBehaviour
 {
+    [SerializeField] private UserDetectionController userDetectionController;
     [SerializeField] private Cloth cloth;
     [SerializeField] private KinectManager kinectManager;
     private float _initialDamping;
@@ -28,7 +29,8 @@ public class CapeDamping : MonoBehaviour
         cloth.damping = 1;
         _firstDisposable = Observable.Timer(TimeSpan.FromSeconds(1f)).Subscribe(_ =>
         {
-            cloth.enabled = kinectManager.GetUsersCount() > 0;
+            cloth.enabled = userDetectionController.NumUsers > 0;
+            // cloth.enabled = kinectManager.GetUsersCount() > 0;
             _secondDisposable = Observable.NextFrame().Subscribe(__ =>
             {
                 cloth.damping = _initialDamping;
