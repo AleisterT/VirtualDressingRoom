@@ -34,11 +34,14 @@ public class StartScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DebugText.Log(string.Empty);
-
         var sensor = KinectSensor.GetDefault();
 
         if (sensor == null)
+        {
+            return;
+        }
+
+        if (KinectManager.Instance.GetUsersCount() == 0)
         {
             return;
         }
@@ -79,13 +82,6 @@ public class StartScreen : MonoBehaviour
         var colorCameraHandPos = sensor.CoordinateMapper.MapCameraPointToColorSpace(hand.Position);
         var colorCameraHeadPos = sensor.CoordinateMapper.MapCameraPointToColorSpace(head.Position);
 
-        DebugText.Log($"Color camera hand pos {colorCameraHandPos.Y} head pos {colorCameraHeadPos.Y}");
-        
-        if (colorCameraHandPos.Y < colorCameraHeadPos.Y)
-        {
-            DebugText.Log($"canvasGroup.alpha {canvasGroup.alpha}");
-        }
-        
         if (colorCameraHandPos.Y < colorCameraHeadPos.Y && canvasGroup.alpha >= 1)
         {
             FadeOut();

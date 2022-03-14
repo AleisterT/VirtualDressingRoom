@@ -7280,13 +7280,13 @@ MonoBehaviour:
   autoHeightAngle: 2
   computeUserMap: 2
   computeColorMap: 1
-  computeInfraredMap: 0
+  computeInfraredMap: 1
   displayUserMap: 0
   displayColorMap: 0
   displaySkeletonLines: 0
   DisplayMapsWidthPercent: 40
   useMultiSourceReader: 1
-  minUserDistance: 2
+  minUserDistance: 1
   maxUserDistance: 4
   maxLeftRightDistance: 1
   maxTrackedUsers: 2

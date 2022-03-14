@@ -38,11 +38,18 @@ public class UserDetectionController : MonoBehaviour
 
     private void UpdateWithCache()
     {
+        if (_previousNumUsers > 0 && KinectManager.Instance.GetUsersCount() == 0)
+        {
+            UserLeft?.Invoke();
+            _previousNumUsers = 0;
+            return;
+        }
+        
         var sensor = KinectSensor.GetDefault();
 
         if (sensor == null)
         {
-            if (_previousNumUsers > 0)
+            if (_previousNumUsers > 0 && KinectManager.Instance.GetUsersCount() == 0)
             {
                 UserLeft?.Invoke();
                 _previousNumUsers = 0;
@@ -66,7 +73,7 @@ public class UserDetectionController : MonoBehaviour
         
             if (_bodies.Length == 0)
             {
-                if (_previousNumUsers > 0)
+                if (_previousNumUsers > 0 && KinectManager.Instance.GetUsersCount() == 0)
                 {
                     UserLeft?.Invoke();
                     _previousNumUsers = 0;
@@ -78,7 +85,7 @@ public class UserDetectionController : MonoBehaviour
 
             if (body == null)
             {
-                if (_previousNumUsers > 0)
+                if (_previousNumUsers > 0 && KinectManager.Instance.GetUsersCount() == 0)
                 {
                     UserLeft?.Invoke();
                     _previousNumUsers = 0;
@@ -86,7 +93,7 @@ public class UserDetectionController : MonoBehaviour
                 return;
             }
             
-            if (_previousNumUsers == 0)
+            if (_previousNumUsers == 0 && KinectManager.Instance.GetUsersCount() > 0)
             {
                 UserJoined?.Invoke();
                 _previousNumUsers = 1;
