@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class SizeController : MonoBehaviour
 {
-    [SerializeField] private float maleDefaultScale = 1.05f;
-    [SerializeField] private float femaleDefaultScale = 1.1f;
-    [SerializeField] private float maleDefaultWidth = 1.05f;
-    [SerializeField] private float femaleDefaultWidth = 1.1f;
+    [SerializeField] public float maleDefaultScale = 1.05f;
+    [SerializeField] public float femaleDefaultScale = 1.1f;
+    [SerializeField] public float maleDefaultWidth = 1.05f;
+    [SerializeField] public float femaleDefaultWidth = 1.1f;
     
     [SerializeField] private AvatarScaler maleScaler;
     [SerializeField] private AvatarScaler femaleScaler;

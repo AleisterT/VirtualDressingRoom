@@ -2866,6 +2866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5b014173f4f6545886b50bce7541ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userDetectionController: {fileID: 1642892831}
   canvasGroup: {fileID: 307560297}
   animationTime: 0.5
 --- !u!114 &307560295
@@ -3522,6 +3523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323d5341c5625124f8cb612e7733a324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFemale: 0
+  scaleFile: zbroja_skala.txt
   verticalOffsetFile: zbroja_wysokosc.txt
   armScaleFile: rece_skala_rycerz.txt
   avatarController: {fileID: 325645350}
@@ -3584,7 +3587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &364155606
 Transform:
   m_ObjectHideFlags: 0
@@ -3624,7 +3627,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 364155605}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.04
   m_Height: 1.25
   m_Direction: 1
@@ -5231,7 +5234,6 @@ MonoBehaviour:
   hat: {fileID: 201847593}
   canvasLayer: {fileID: 2123679069}
   settingsLayer: {fileID: 161529501}
-  startScreen: {fileID: 307560294}
 --- !u!1 &633109983
 GameObject:
   m_ObjectHideFlags: 0
@@ -5906,7 +5908,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323d5341c5625124f8cb612e7733a324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  verticalOffsetFile: 
+  isFemale: 1
+  scaleFile: suknia_skala.txt
+  verticalOffsetFile: suknia_wysokosc.txt
   armScaleFile: rece_skala_suknia.txt
   avatarController: {fileID: 754042249}
   avatarScaler: {fileID: 754042248}
@@ -7289,7 +7293,7 @@ MonoBehaviour:
   minUserDistance: 1
   maxUserDistance: 4
   maxLeftRightDistance: 1
-  maxTrackedUsers: 2
+  maxTrackedUsers: 1
   showTrackedUsersOnly: 1
   userDetectionOrder: 0
   ignoreInferredJoints: 0
@@ -11423,6 +11427,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2c691d547d3ea448316539ea487ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1779143408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1779143409}
+  - component: {fileID: 1779143412}
+  - component: {fileID: 1779143411}
+  - component: {fileID: 1779143410}
+  m_Layer: 12
+  m_Name: SwordCollider (short)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1779143409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779143408}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.50000006, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1932009739}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1779143410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779143408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af481fceda0fb447b11a03d77cf5cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swordTransform: {fileID: 1962874786}
+  forceShow: 0
+--- !u!54 &1779143411
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779143408}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &1779143412
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779143408}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.04
+  m_Height: 0.85
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1797668733 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7005442285551078694, guid: 3024b3f75c3b49744a3b3be932edf267,
@@ -11753,6 +11834,7 @@ Transform:
   m_Children:
   - {fileID: 1962874786}
   - {fileID: 364155606}
+  - {fileID: 1779143409}
   m_Father: {fileID: 1683632882}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -75, y: 0, z: -90.00001}

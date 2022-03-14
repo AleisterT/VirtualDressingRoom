@@ -44,6 +44,12 @@ public class HandCursor : MonoBehaviour
             cursor.anchoredPosition = new Vector2(3000,3000);
             return;
         }
+
+        if (userDetectionController.NumUsers == 0)
+        {
+            cursor.anchoredPosition = new Vector2(3000,3000);
+            return;
+        }
         
         var sensor = KinectSensor.GetDefault();
 

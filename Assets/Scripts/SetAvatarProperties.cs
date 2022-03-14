@@ -3,12 +3,15 @@ using UnityEngine;
 
 public class SetAvatarProperties : MonoBehaviour
 {
+    [SerializeField] private bool isFemale;
+    [SerializeField] private string scaleFile = "zbroja_skala.txt";
     [SerializeField] private string verticalOffsetFile = "zbroja_wysokosc.txt";
     [SerializeField] private string armScaleFile = "rece_skala.txt";
     [SerializeField] private AvatarController avatarController;
     [SerializeField] private AvatarScaler avatarScaler;
     string VerticalOffsetFilePath => Path.Combine(Application.dataPath, verticalOffsetFile);
     string ArmScaleFilePath => Path.Combine(Application.dataPath, armScaleFile);
+    string ScaleFilePath => Path.Combine(Application.dataPath, scaleFile);
 
     void Start()
     {
@@ -29,6 +32,26 @@ public class SetAvatarProperties : MonoBehaviour
             if (result && avatarScaler != null)
             {
                 avatarScaler.armScaleFactor = armScaleFactor;
+            }
+        }
+        
+        if (!string.IsNullOrEmpty(scaleFile) && File.Exists(ScaleFilePath))
+        {
+            var content = File.ReadAllText(ScaleFilePath);
+            bool result = float.TryParse(content, out var scaleFactor);
+            if (result && avatarController != null)
+            {
+                avatarScaler.bodyScaleFactor = scaleFactor;
+                avatarScaler.ScaleAvatar(0,false);
+                var sizeController = FindObjectOfType<SizeController>();
+                if (isFemale)
+                {
+                    sizeController.femaleDefaultScale = scaleFactor;
+                }
+                else
+                {
+                    sizeController.maleDefaultScale = scaleFactor;
+                }
             }
         }
     }

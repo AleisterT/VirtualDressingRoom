@@ -15,10 +15,7 @@ public class RaycastModels : MonoBehaviour
     [SerializeField] private GameObject hat;
     [SerializeField] private GameObject canvasLayer;
     [SerializeField] private GameObject settingsLayer;
-    [SerializeField] private StartScreen startScreen;
 
-    private bool _userPresent;
-    
     private void Awake()
     {
         userDetectionController.UserJoined += UserJoinedHandler;
@@ -65,9 +62,7 @@ public class RaycastModels : MonoBehaviour
     private void UserLeftHandler()
     {
         cursor.Hide();
-        _userPresent = false;
         hat.gameObject.SetActive(false);
-        startScreen.FadeIn();
         foreach (var simulatedCloth in simulatedCloths)
         {
             simulatedCloth.SetActive(false);
@@ -78,7 +73,6 @@ public class RaycastModels : MonoBehaviour
     private void UserJoinedHandler()
     {
         cursor.Show();
-        _userPresent = true;
         hat.gameObject.SetActive(false);
         gameObject.SetActive(true);
         foreach (var simulatedCloth in simulatedCloths)
@@ -90,7 +84,7 @@ public class RaycastModels : MonoBehaviour
 
     public void SelectMaleRenderer()
     {
-        if (!_userPresent)
+        if (userDetectionController.NumUsers == 0)
         {
             return;
         }
@@ -104,7 +98,7 @@ public class RaycastModels : MonoBehaviour
     
     public void SelectFemaleRenderer()
     {
-        if (!_userPresent)
+        if (userDetectionController.NumUsers == 0)
         {
             return;
         }
@@ -117,7 +111,7 @@ public class RaycastModels : MonoBehaviour
 
     public void ClickMaleRenderer()
     {
-        if (!_userPresent)
+        if (userDetectionController.NumUsers == 0)
         {
             return;
         }
@@ -134,7 +128,7 @@ public class RaycastModels : MonoBehaviour
     
     public void ClickFemaleRenderer()
     {
-        if (!_userPresent)
+        if (userDetectionController.NumUsers == 0)
         {
             return;
         }

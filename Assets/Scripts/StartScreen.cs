@@ -7,12 +7,14 @@ using UnityEngine;
 
 public class StartScreen : MonoBehaviour
 {
+    [SerializeField] private UserDetectionController userDetectionController;
     [SerializeField] public CanvasGroup canvasGroup;
     [SerializeField] private float animationTime = 0.5f;
     
     private BodyFrameReader _bodyFrameReader = null;
     private Body[] _bodies = new Body[0];
-    private IDisposable _animationdDisposable;
+    private IDisposable _fadeInAnimationdDisposable;
+    private IDisposable _fadeoutAnimationdDisposable;
 
     private BodyFrameReader BodyReader
     {
@@ -31,6 +33,23 @@ public class StartScreen : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        userDetectionController.UserJoined += NumUserChangedHandler;
+        userDetectionController.UserLeft += NumUserChangedHandler;
+    }
+
+    private void OnDestroy()
+    {
+        userDetectionController.UserJoined -= NumUserChangedHandler;
+        userDetectionController.UserLeft -= NumUserChangedHandler;
+    }
+
+    private void NumUserChangedHandler()
+    {
+        TryFadeIn();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -41,7 +60,7 @@ public class StartScreen : MonoBehaviour
             return;
         }
 
-        if (KinectManager.Instance.GetUsersCount() == 0)
+        if (userDetectionController.NumUsers == 0)
         {
             return;
         }
@@ -84,24 +103,36 @@ public class StartScreen : MonoBehaviour
 
         if (colorCameraHandPos.Y < colorCameraHeadPos.Y && canvasGroup.alpha >= 1)
         {
-            FadeOut();
+            TryFadeOut();
         }
 
     }
 
-    public void FadeOut()
+    public void TryFadeOut()
     {
-        _animationdDisposable?.Dispose();
-        canvasGroup.alpha = 0.99f;
-        _animationdDisposable = Anime.Play(canvasGroup.alpha, 0, Easing.Linear(animationTime))
+        if (_fadeoutAnimationdDisposable != null)
+        {
+            return;
+        }
+        _fadeInAnimationdDisposable?.Dispose();
+        _fadeoutAnimationdDisposable = Anime.Play(canvasGroup.alpha, 0, Easing.Linear(animationTime))
+            .DoOnCompleted(()=>_fadeoutAnimationdDisposable = null)
+            .DoOnCancel(()=>_fadeoutAnimationdDisposable = null)
+            .DoOnError(e=>_fadeoutAnimationdDisposable = null)
             .Subscribe(a => canvasGroup.alpha = a);
     }
 
-    public  void FadeIn()
+    public  void TryFadeIn()
     {
-        _animationdDisposable?.Dispose();
-        canvasGroup.alpha = 0.01f;
-        _animationdDisposable = Anime.Play(canvasGroup.alpha, 1, Easing.Linear(animationTime))
+        if (_fadeInAnimationdDisposable != null)
+        {
+            return;
+        }
+        _fadeoutAnimationdDisposable?.Dispose();
+        _fadeInAnimationdDisposable = Anime.Play(canvasGroup.alpha, 1, Easing.Linear(animationTime))
+            .DoOnCompleted(()=>_fadeInAnimationdDisposable = null)
+            .DoOnCancel(()=>_fadeInAnimationdDisposable = null)
+            .DoOnError(e=>_fadeInAnimationdDisposable = null)
             .Subscribe(a => canvasGroup.alpha = a);
     }
 }
