@@ -3381,7 +3381,7 @@ MonoBehaviour:
   applyMuscleLimits: 0
   flipLeftRight: 0
   horizontalOffset: 0
-  verticalOffset: -0.03
+  verticalOffset: 0.05
   forwardOffset: 0
 --- !u!114 &325645351
 MonoBehaviour:
@@ -3398,9 +3398,9 @@ MonoBehaviour:
   playerIndex: 0
   mirroredAvatar: 1
   minUserDistance: 0.1
-  bodyScaleFactor: 1.025
+  bodyScaleFactor: 0.925
   bodyWidthFactor: 1.1
-  armScaleFactor: 1.2
+  armScaleFactor: 0.9
   legScaleFactor: 0
   continuousScaling: 1
   smoothFactor: 5
@@ -3525,6 +3525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFemale: 0
   scaleFile: zbroja_skala.txt
+  widthFile: zbroja_szerokosc.txt
   verticalOffsetFile: zbroja_wysokosc.txt
   armScaleFile: rece_skala_rycerz.txt
   avatarController: {fileID: 325645350}
@@ -5910,6 +5911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFemale: 1
   scaleFile: suknia_skala.txt
+  widthFile: suknia_szerokosc.txt
   verticalOffsetFile: suknia_wysokosc.txt
   armScaleFile: rece_skala_suknia.txt
   avatarController: {fileID: 754042249}
