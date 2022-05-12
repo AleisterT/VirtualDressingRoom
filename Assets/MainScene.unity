@@ -6037,7 +6037,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Przy pierwszym uruchomieniu program wymaga \npodania wysoko\u015Bci na
-    jakiej znajduje si\u0119 Kinect (w centrymetrach)"
+    jakiej znajduje si\u0119 Kinect (w centrymetrach)\nAplikacja zostanie zamkni\u0119ta.
+    Uruchom ponownie."
 --- !u!222 &848722684
 CanvasRenderer:
   m_ObjectHideFlags: 0

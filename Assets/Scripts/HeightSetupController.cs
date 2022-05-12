@@ -32,14 +32,15 @@ public class HeightSetupController : MonoBehaviour
 
         if (!heightSet)
         {
-            Observable.NextFrame().Subscribe(_ =>
-            {
-                inputField.Select();
-                inputField.ActivateInputField();
-            });
+            StartCoroutine(InitialSelectRoutine());
         }
-        
-        
+    }
+
+    private IEnumerator InitialSelectRoutine()
+    {
+        yield return null;
+        inputField.Select();
+        inputField.ActivateInputField();
     }
 
     public void Confirm()
@@ -50,6 +51,7 @@ public class HeightSetupController : MonoBehaviour
             kinectManager.sensorHeight = heightCm / 100f;
             gameObject.SetActive(false);
             File.WriteAllText(SensorHeightFilePath,inputField.text);
+            Application.Quit();
         }
     }
     

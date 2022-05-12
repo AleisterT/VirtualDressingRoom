@@ -20,15 +20,18 @@ public class RaycastModels : MonoBehaviour
     {
         userDetectionController.UserJoined += UserJoinedHandler;
         userDetectionController.UserLeft += UserLeftHandler;
-        Observable.NextFrame().Subscribe(_ =>
+        StartCoroutine(InitialDisableRoutine());
+    }
+
+    private IEnumerator InitialDisableRoutine()
+    {
+        yield return null;
+        hat.gameObject.SetActive(false);
+        foreach (var simulatedCloth in simulatedCloths)
         {
-            hat.gameObject.SetActive(false);
-            foreach (var simulatedCloth in simulatedCloths)
-            {
-                simulatedCloth.SetActive(false);
-            }
-            Deselect();
-        });
+            simulatedCloth.SetActive(false);
+        }
+        Deselect();
     }
 
     private void OnEnable()
