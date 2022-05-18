@@ -16,15 +16,6 @@ public class InitSceneScript : MonoBehaviour
 
     private async Task AwaitSensorAsync()
     {
-
-        bool isCorrectRes = Screen.width == 1080 && Screen.height == 1920;
-        while (!isCorrectRes)
-        {
-            Screen.SetResolution(1080,1920,FullScreenMode.ExclusiveFullScreen);
-            isCorrectRes = Screen.width == 1080 && Screen.height == 1920;
-            await Task.Delay(1000);
-        }
-
         var dllFilePath = $"{Application.dataPath}/../KinectUnityAddin.dll";
         if (!File.Exists(dllFilePath))
         {
